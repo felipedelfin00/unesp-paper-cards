@@ -87,6 +87,12 @@ O sistema foi desenvolvido de forma modular, permitindo a execução de apenas u
 
 
 
+## Documentação
+
+O relatório completo do projeto, com detalhes sobre a arquitetura e as decisões técnicas, está disponível em [docs/relatorio.pdf](docs/relatorio.pdf).
+
+
+
 ## Autoria
 
 Projeto desenvolvido no âmbito do Programa de Extensão "Computação Aplicada e Ciência de Dados", da UNESP - Instituto de Geociências e Ciências Exatas (IGCE), campus de Rio Claro.
