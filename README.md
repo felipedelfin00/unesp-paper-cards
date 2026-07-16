@@ -28,7 +28,7 @@ O processamento é dividido em quatro etapas independentes:
 Após o processamento, os dados são disponibilizados através de uma API REST consumida pelo frontend.
 
 <p align="center">
-    <img src="https://imgur.com/udCbkJA" alt="Interface do sistema" width="800">
+    <img src="https://i.imgur.com/udCbkJA.png" alt="Interface do sistema" width="800">
 </p>
 
 
@@ -75,8 +75,8 @@ O sistema foi desenvolvido de forma modular, permitindo a execução de apenas u
 ## Autoria
 Projeto desenvolvido no âmbito do Programa de Extensão "Computação Aplicada e Ciência de Dados", da UNESP - Instituto de Geociências e Ciências Exatas (IGCE), campus de Rio Claro.
 
-**Autor:** Felipe Rovigatti Delfino
-**Orientador:** Prof. Dr. Denis Henrique Pinheiro Salvadeo
+- **Autor:** Felipe Rovigatti Delfino
+- **Orientador:** Prof. Dr. Denis Henrique Pinheiro Salvadeo
 
 ## Licença
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
