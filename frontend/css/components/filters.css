@@ -1,0 +1,122 @@
+div.filter-modal {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    margin: 48px 0;
+    padding: 16px;
+    width: 560px;
+}
+
+div.filter__select-group {
+    position: relative;
+}
+
+div.filter__select {
+    background-color: #FFF;
+    border-radius: 8px;
+    border: 1px solid #D8D8D8;
+    cursor: pointer;
+    padding: 8px;
+    transition: all linear 0.3s;
+}
+
+    div.filter__select:hover {
+        border: 1px solid #C8C8C8;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+div.filter__select-options {
+    background-color: #D8D8D8;
+    border-radius: 4px;
+    max-height: 320px;
+    opacity: 0;
+    overflow-y: auto;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    transform: translateY(-8px);
+    transition: all linear 0.1s;
+    width: fit-content;
+    z-index: 30;
+}
+
+    div.filter__select-options.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(8px);
+    }
+
+div.filter__select-option {
+    cursor: pointer;
+    padding: 16px;
+    transition: all linear 0.05s;
+}
+
+    div.filter__select-option:hover {
+        background-color: #C8C8C8;
+    }
+
+div.filter__sdg-item {
+    border-radius: 16px;
+    cursor: pointer;
+    gap: 8px;
+    padding: 8px;
+    transition: all linear 0.1s;
+    width: 83px;
+}
+    div.filter__sdg-item:hover {
+        transform: scale(1.05);
+    }
+
+    div.filter__sdg-item.selected .checkbox-check {
+        opacity: 1;
+    }
+
+div.filter__button {
+    background-color: #111;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1;
+    padding: 12px 16px;
+    transition: all linear 0.3s;
+    user-select: none;
+}
+
+    div.filter__button:hover {
+        background-color: #181818;
+    }
+
+div.checkbox {
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 100%;
+    display: flex;
+    height: 21px;
+    justify-content: center;
+    width: 21px;
+}
+
+div.checkbox-check {
+    background-color: #111;
+    border-radius: 100%;
+    height: 10px;
+    opacity: 0;
+    width: 10px;
+}
+
+input.filter {
+    background-color: #FFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 8px;
+    padding: 8px;
+    transition: all linear 0.3s;
+    width: calc(100% - 17px);
+}
+
+    input.filter:focus,
+    input.filter:hover {
+        border: 1px solid #C8C8C8;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        outline: none;
+    }

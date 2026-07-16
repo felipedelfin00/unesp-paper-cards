@@ -1,0 +1,22 @@
+div.overlay {
+    backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+div.content {
+    padding: 16px;
+}
+
+div.modal__close {
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 4px;
+}

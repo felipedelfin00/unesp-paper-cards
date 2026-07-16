@@ -1,0 +1,57 @@
+div.card-modal {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    margin: 48px 0;
+    padding: 16px;
+    width: 580px;
+}
+
+div.card-modal__icon {
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+div.card-modal__sdg {
+    border-radius: 8px;
+    padding: 16px;
+}
+
+div.card-modal__keywords {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+div.card-modal__keyword {
+    background-color: #B8B8B8;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+div.card-modal__block {
+    background-color: #D8D8D8;
+    border-radius: 8px;
+    flex: 1;
+    padding: 8px 16px;
+}
+
+div.card-modal__button {
+    background-color: #111;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 16px;
+    transition: all linear 0.3s;
+    user-select: none;
+}
+
+    div.card-modal__button:hover {
+        background-color: #181818;
+    }
+
+img.card__sdg-icon {
+    border-radius: 8px;
+    height: 48px;
+    width: 48px;
+}

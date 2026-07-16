@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Divulgação de trabalhos acadêmicos para a sociedade">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>PONTE</title>
+        <link rel="icon" href="icons/icon.png">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/components/header.css">
+        <link rel="stylesheet" href="css/components/top-bar.css ">
+        <link rel="stylesheet" href="css/components/catalog.css ">
+        <link rel="stylesheet" href="css/components/modal.css ">
+        <link rel="stylesheet" href="css/components/card.css ">
+        <link rel="stylesheet" href="css/components/filters.css ">
+    </head>
+
+    <body>
+        <!-- ===== HEADER ===== -->
+        <div class="header flex start">
+            <img class="way-bigger-img" src="icons/icon.png">
+            <div>
+                <p class="medium-text bold">PONTE</p>
+                <p class="small-text light-gray-text">Cards de trabalhos acadêmicos</p>
+            </div>
+        </div>
+
+        <!-- ===== TOP-BAR ===== -->
+        <div class="top-bar flex">
+            <div class="top-bar__left flex start">
+                <p class="big-text bold">Trabalhos encontrados</p>
+                <div class="paper-count medium-text white-text semi-bold" id="paper-count"></div>
+            </div>
+
+            <div class="top-bar__right flex end">
+                <label class="search flex start">
+                    <img class="big-img" src="icons/search.svg">
+                    <input class="top-bar medium-text" id="search" type="text" placeholder="Buscar trabalhos acadêmicos...">
+                </label>
+
+                <div class="top-bar__actions flex">
+                    <div class="sort-group" style="width: 190px;">
+                        <div class="top-bar__button flex" id="select-sort">
+                            <p class="medium-text" id="current-sort">Mais recentes</p>
+                            <img class="medium-img" src="icons/chevron-down.svg">
+                        </div>
+
+                        <div class="top-bar__select" id="sort-options">
+                            <div class="top-bar__select__option medium-text" id="newest">Mais recentes</div>
+                            <div class="top-bar__select__option medium-text" id="oldest">Mais antigos</div>
+                            <div class="top-bar__select__option medium-text" id="visits">Mais acessados</div>
+                            <div class="top-bar__select__option medium-text" id="random">Aleatório</div>
+                        </div>
+                    </div>
+
+                    <div class="top-bar__button flex" id="button-filters">
+                        <p class="medium-text">Filtros</p>
+                        <img class="medium-img" src="icons/chevron-right.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CARDS ===== -->
+        <div class="cards flex center" id="cards">
+            <!-- Alimentado via JavaScript -->
+        </div>
+
+        <!-- ===== MODALS ===== -->
+        <div class="overlay" id="overlay" style="display: none;">
+
+            <!-- === CARD === -->
+            <div class="card-modal hidden" id="card-modal">
+                <!-- Alimentado via JavaScript -->
+            </div>
+
+            <!-- === FILTERS === -->
+            <div class="filter-modal hidden" id="filter-modal">
+                <div class="flex end">
+                    <div class="modal__close" id="modal-close">
+                        <img class="bigger-img" src="icons/x.svg">
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="flex start">
+                        <img class="bigger-img" src="icons/funnel.svg">
+                        <p class="big-text bold">Filtros</p>
+                    </div>
+
+                    <div class="margin-big">
+                        <p class="small-text bold">Área do conhecimento</p>
+                        <input class="filter small-text margin-smaller" id="knowledgeArea" type="text" placeholder="Digite uma área do conhecimento..."> 
+                    </div>
+
+                    <div class="margin-medium">
+                        <p class="small-text bold">Tipo do trabalho</p>
+                        <div class="filter__select-group margin-smaller" data-filter="paperType">
+                            <div class="filter__select flex">
+                                <p class="filter__select-label small-text"></p>
+                                <img class="big-img" src="icons/chevron-down.svg">
+                            </div>
+
+                            <div class="filter__select-options">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="margin-medium">
+                        <p class="small-text bold">Idioma</p>
+                        <div class="filter__select-group margin-smaller" data-filter="language">
+                            <div class="filter__select flex">
+                                <p class="filter__select-label small-text"></p>
+                                <img class="big-img" src="icons/chevron-down.svg">
+                            </div>
+
+                            <div class="filter__select-options">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="margin-medium">
+                        <p class="small-text bold">Campus</p>
+                        <div class="filter__select-group margin-smaller" data-filter="campus">
+                            <div class="filter__select flex">
+                                <p class="filter__select-label small-text"></p>
+                                <img class="big-img" src="icons/chevron-down.svg">
+                            </div>
+
+                            <div class="filter__select-options">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="margin-medium">
+                        <p class="small-text bold">Ano de emissão</p>
+                        <div class="flex">
+                            <div class="margin-smaller" style="flex: 1;">
+                                <p class="smaller-text light-gray-text semi-bold">De</p>
+                                <div class="filter__select-group margin-smaller" data-filter="yearFrom">
+                                    <div class="filter__select flex">
+                                        <p class="filter__select-label small-text"></p>
+                                        <img class="big-img" src="icons/chevron-down.svg">
+                                    </div>
+
+                                    <div class="filter__select-options">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="margin-smaller" style="flex: 1;">
+                                <p class="smaller-text light-gray-text semi-bold">Até</p>
+                                <div class="filter__select-group margin-smaller" data-filter="yearTo">
+                                    <div class="filter__select flex">
+                                        <p class="filter__select-label small-text"></p>
+                                        <img class="big-img" src="icons/chevron-down.svg">
+                                    </div>
+
+                                    <div class="filter__select-options">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="margin-medium">
+                        <p class="small-text bold">Autor</p>
+                        <input class="filter small-text margin-smaller" id="author" type="text" placeholder="Digite o nome de um autor..."> 
+                    </div>
+
+                    <div class="margin-medium">
+                        <p class="small-text bold">Orientador</p>
+                        <input class="filter small-text margin-smaller" id="advisor" type="text" placeholder="Digite o nome de um orientador..."> 
+                    </div>
+
+                    <div class="margin-medium">
+                        <p class="small-text bold">Objetivos de Desenvolvimento Sustentável</p>
+                        <div class="margin-small flex start" style="gap: 8px">
+                            <div class="filter__sdg-item background-sdg-1 flex" data-sdg="1">
+                                <p class="small-text bold">ODS 1</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-2 flex" data-sdg="2">
+                                <p class="small-text bold">ODS 2</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-3 flex" data-sdg="3">
+                                <p class="small-text bold">ODS 3</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-4 flex" data-sdg="4">
+                                <p class="small-text bold">ODS 4</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-5 flex" data-sdg="5">
+                                <p class="small-text bold">ODS 5</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="margin-small flex start" style="gap: 8px">
+                            <div class="filter__sdg-item background-sdg-6 flex" data-sdg="6">
+                                <p class="small-text bold">ODS 6</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-7 flex" data-sdg="7">
+                                <p class="small-text bold">ODS 7</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-8 flex" data-sdg="8">
+                                <p class="small-text bold">ODS 8</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-9 flex" data-sdg="9">
+                                <p class="small-text bold">ODS 9</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-10 flex" data-sdg="10">
+                                <p class="small-text bold">ODS 10</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="margin-small flex start" style="gap: 8px">
+                            <div class="filter__sdg-item background-sdg-11 flex" data-sdg="11">
+                                <p class="small-text bold">ODS 11</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-12 flex" data-sdg="12">
+                                <p class="small-text bold">ODS 12</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-13 flex" data-sdg="13">
+                                <p class="small-text bold">ODS 13</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-14 flex" data-sdg="14">
+                                <p class="small-text bold">ODS 14</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-15 flex" data-sdg="15">
+                                <p class="small-text bold">ODS 15</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="margin-small flex start" style="gap: 8px">
+                            <div class="filter__sdg-item background-sdg-16 flex" data-sdg="16">
+                                <p class="small-text bold">ODS 16</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+
+                            <div class="filter__sdg-item background-sdg-17 flex" data-sdg="17">
+                                <p class="small-text bold">ODS 17</p>
+                                <div class="checkbox"><div class="checkbox-check"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="margin-big flex">
+                        <div class="filter__button flex" id="clear-filter">
+                            <p class="small-text white-text">Limpar filtros</p>
+                            <img class="big-img" src="icons/rotate-ccw.svg">
+                        </div>
+
+                        <div class="filter__button flex" id="apply-filter">
+                            <p class="small-text white-text">Aplicar filtros</p>
+                            <img class="big-img" src="icons/check.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-top flex center" id="scroll-top">
+            <img class="bigger-img" src="icons/arrow-up-from-dot.svg">
+        </div>
+
+        <div id="scroll-sentinel"></div>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

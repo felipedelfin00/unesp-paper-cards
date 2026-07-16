@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.venv
+backend/app/.env
+backend/data/raw.jsonl
