@@ -3,3 +3,6 @@ __pycache__/
 .venv
 backend/app/.env
 backend/data/raw.jsonl
+backend/data/logs/api.log
+backend/data/logs/database.log
+backend/data/logs/pipeline.log
