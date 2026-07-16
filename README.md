@@ -12,6 +12,7 @@ Sistema para extração, enriquecimento e divulgação de trabalhos acadêmicos 
 * [Execução](#execução)
 * [Banco de dados](#banco-de-dados)
 * [Pipeline de processamento](#pipeline-de-processamento)
+* [Documentação](#documentação)
 * [Autoria](#autoria)
 * [Licença](#licença)
 
